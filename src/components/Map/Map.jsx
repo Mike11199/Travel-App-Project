@@ -18,7 +18,7 @@ const Map = () => {
                 
                 {/* This component is VERY IMPORTANT.  We will pass a few props into it.  Go to console.cloud.google.com/projectcreate to get API key */}
                 <GoogleMapReact
-                    bootstrapURLKeys={{key: '' }}
+                    bootstrapURLKeys={{key: 'AIzaSyAq-T3yVkjvA-aLYQbWs5n2k8Jz2a2GpEU' }}
                     defaultCenter={coordinates}
                     center={coordinates}
                     defaultZoom={14}
