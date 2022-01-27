@@ -31,7 +31,7 @@ const Map = () => {
                 </GoogleMapReact>
 
             </div>>
-        )
+        );
     
     }
 
