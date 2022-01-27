@@ -8,6 +8,7 @@ import useStyles from './styles';
 
 
 //React Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.
+
 // Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React 
 // elements describing what should appear on the screen.
 
@@ -17,22 +18,22 @@ const Header = () => {
 
         return (
             <AppBar position="static">
-                <Toolbar classname={classes.Toolbar}>
+                <Toolbar className={classes.toolbar}>
                     <Typography variant="h5" className={classes.title}>
                         Travel Advisor
                     </Typography>
                     <Box display="flex">
-                    <Typography variant="h6" className={classes.title}>
-                        Explore new places
-                    </Typography>
-                    {/* <Autocomplete> */}
+                        <Typography variant="h6" className={classes.title}>
+                            Explore new places
+                        </Typography>
+                    
                         <div className={classes.search}>
-                            <div className={classes.SearchIcon}>  
+                            <div className={classes.searchIcon}>  
                                 <SearchIcon />
                             </div>
-                            <InputBase placeholder="Search... " classes={{root:classes.inputRoot, input: classes.inputInput}} />
+                            <InputBase placeholder="Search... " classes={{root: classes.inputRoot, input: classes.inputInput}}  />
                         </div>
-                    {/* </Autocomplete> */}
+                
                    
                     </Box>
                 </Toolbar>
