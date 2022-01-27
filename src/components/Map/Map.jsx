@@ -16,7 +16,7 @@ const Map = () => {
         return (
             <div className={classes.mapContainer}>
                 
-                {/* This component is VERY IMPORTANT.  We will pass a few props into it.  Go to console.cloud.google.com to get API key */}
+                {/* This component is VERY IMPORTANT.  We will pass a few props into it.  Go to console.cloud.google.com/projectcreate to get API key */}
                 <GoogleMapReact
                     bootstrapURLKeys={{key: '' }}
                     defaultCenter={coordinates}
