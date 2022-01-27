@@ -30,7 +30,7 @@ const Map = () => {
 
                 </GoogleMapReact>
 
-            </div>>
+            </div>
         );
     
     }
