@@ -20,8 +20,10 @@ const Map = ({ setCoordinates, setBounds, coordinates}) => {
                 
                 <GoogleMapReact
                     bootstrapURLKeys={{key: 'AIzaSyAq-T3yVkjvA-aLYQbWs5n2k8Jz2a2GpEU' }}
-                    defaultCenter={{lat: 41, lng: -71}}
-                    center={{lat: 41, lng: -71}}
+                    // defaultCenter={{lat: 41, lng: -71}}
+                    // center={{lat: 41, lng: -71}}
+                    defaultCenter={coordinates}
+                    center={coordinates}
                     defaultZoom={14}
                     margin={[50,50,50,50]}
                     options={''}

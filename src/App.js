@@ -12,7 +12,7 @@ import Map from './components/Map/Map'
 
 const App = () => {
     const [places, setPlaces] = useState([]);
-    const [coordinates, setCoordinates] = useState({});
+    const [coordinates, setCoordinates] = useState({lat: 0, lng: 0});
     //set map corners here
     const [bounds, setBounds] = useState(null);
     
