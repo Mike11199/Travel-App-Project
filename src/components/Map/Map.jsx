@@ -6,31 +6,25 @@ import Rating from '@material-ui/lab';
 
 import useStyles from './styles';
 
-
-const Map = ({ setCoordinates, setBounds, coordinates}) => {
+const Map = () => {
     // starting the hooks here.  useMediaQuery pass in a string so that isMobile variable will be false if the device is larger than 600 pixels.
     const classes = useStyles();
     const isMobile = useMediaQuery('(min-width:600px)');
 
-
+    const coordinates = { lat: 0, lng: 0};
 
         return (
             <div className={classes.mapContainer}>
-
+                
                 
                 <GoogleMapReact
                     bootstrapURLKeys={{key: 'AIzaSyAq-T3yVkjvA-aLYQbWs5n2k8Jz2a2GpEU' }}
-                    // defaultCenter={{lat: 38, lng: -121}}
-                    // center={{lat: 41, lng: -71}}
                     defaultCenter={coordinates}
                     center={coordinates}
                     defaultZoom={14}
                     margin={[50,50,50,50]}
                     options={''}
-                    onChange={(e) => {
-                        console.log(e);
-                        setCoordinates({ lat: e.center.lat, lng: e.center.lng });
-                    }}
+                    onChange={''}
                     onChildClick={''}
                 >
 
