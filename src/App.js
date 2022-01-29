@@ -12,7 +12,8 @@ import Map from './components/Map/Map'
 
 const App = () => {
     const [places, setPlaces] = useState([]);
-    const [coordinates, setCoordinates] = useState({lat: 38, lng: -122});
+    // const [coordinates, setCoordinates] = useState({lat: 38, lng: -122});
+    const [coordinates, setCoordinates] = useState({});
     //set map corners here
     const [bounds, setBounds] = useState(null);
     
@@ -22,13 +23,25 @@ const App = () => {
     //getPlacesData is also an ASYNCHRONOUS function.  So have to add the .then on it which is another callback function
 
 
+    //use built in browser geolocation api to get the user's location coordinates
     useEffect(() => {
+        navigator.geolocation.getCurrentPosition(({coords: {latitude, longitude}}) =>{
+            setCoordinates({lat: latitude, lng: longitude});
+        })
+                
+        
+    },[]);
+
+
+    useEffect(() => {
+        console.log(coordinates, bounds);
+
         getPlacesData()
         .then((data) => {
             console.log(data);
             setPlaces(data);
         })
-    }, []);
+    }, [coordinates, bounds]);
 
 
     return (
